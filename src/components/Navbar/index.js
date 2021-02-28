@@ -34,6 +34,10 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
     };
 
+    const toggleBottom = () => {
+        scroll.scrollToBottom();
+    };
+
     return (
         <>
             <IconContext.Provider value={{ color: "#fff"}}>
@@ -45,8 +49,7 @@ const Navbar = ({ toggle }) => {
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks 
-                                to="about" 
+                                <NavLinks to="about" 
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 
@@ -55,17 +58,32 @@ const Navbar = ({ toggle }) => {
                                 >Info Section 1</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="discover">Info Section 2</NavLinks>
+                                <NavLinks to="discover" 
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}>Info Section 2</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="services">Card Section</NavLinks>
+                                <NavLinks to="services" 
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}>Card Section</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="signup">Info Section 3</NavLinks>
+                                <NavLinks to="signup" 
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}>Info Section 3</NavLinks>
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                            <NavBtnLink to="/" onClick={toggleBottom}>Sign In</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
