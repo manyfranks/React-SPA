@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Video from '../../videos/video-2.mp4';
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
 import { Button } from '../ButtonElement';
+import { animateScroll as scroll } from 'react-scroll';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
@@ -9,6 +10,10 @@ const HeroSection = () => {
     const onHover = () => {
         setHover(!hover);
     }
+
+    const toggleBottom = () => {
+        scroll.scrollToBottom();
+    };
 
     return (
         <HeroContainer id='home'>
@@ -30,7 +35,8 @@ const HeroSection = () => {
                             duration={500} 
                             spy={true} 
                             exact='true' 
-                            offset={-80}>
+                            offset={-80}
+                            onClick={toggleBottom}>
                         Scroll To Bottom {hover ? <ArrowRight /> : <ArrowForward />}
                     </Button>
                 </HeroBtnWrapper>

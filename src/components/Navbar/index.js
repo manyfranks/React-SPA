@@ -34,10 +34,6 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
     };
 
-    const toggleBottom = () => {
-        scroll.scrollToBottom();
-    };
-
     return (
         <>
             <IconContext.Provider value={{ color: "#fff"}}>
@@ -83,7 +79,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to="/" onClick={toggleBottom}>Sign In</NavBtnLink>
+                            <NavBtnLink to="/signin">Sign In</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
