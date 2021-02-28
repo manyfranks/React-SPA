@@ -25,49 +25,48 @@ const Footer = () => {
     };
 
     return (
-        <FooterContainer>
+        <FooterContainer id='footer'>
             <FooterWrap>
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>About Us</FooterLinkTitle>
-                                <FooterLink to="/signin">How it works</FooterLink>
-                                <FooterLink to="/">Testimonials</FooterLink>
-                                <FooterLink to="/">Careers</FooterLink>
-                                <FooterLink to="/">Investors</FooterLink>
-                                <FooterLink to="/">Terms of Service</FooterLink>
+                            <FooterLinkTitle>Footer Col 1</FooterLinkTitle>
+                                <FooterLink to="/signin">Working Link</FooterLink>
+                                <FooterLink to="/">Footer Link 1</FooterLink>
+                                <FooterLink to="/">Footer Link 2</FooterLink>
+                                <FooterLink to="/">Footer Link 3</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Contact us</FooterLinkTitle>
-                                <FooterLink to="/">Contact</FooterLink>
-                                <FooterLink to="/">Support</FooterLink>
-                                <FooterLink to="/">Destinations</FooterLink>
-                                <FooterLink to="/">Sponsorships</FooterLink>
+                            <FooterLinkTitle>Footer Col 2</FooterLinkTitle>
+                                <FooterLink to="/">Footer Link 1</FooterLink>
+                                <FooterLink to="/">Footer Link 2</FooterLink>
+                                <FooterLink to="/">Footer Link 3</FooterLink>
+                                <FooterLink to="/">Footer Link 4</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Videos</FooterLinkTitle>
-                                <FooterLink to="/">Submit Videos</FooterLink>
-                                <FooterLink to="/">Ambassadors</FooterLink>
-                                <FooterLink to="/">Agency</FooterLink>
-                                <FooterLink to="/">Influencer</FooterLink>
+                        <FooterLinkTitle>Footer Col 3</FooterLinkTitle>
+                                <FooterLink to="/">Footer Link 1</FooterLink>
+                                <FooterLink to="/">Footer Link 2</FooterLink>
+                                <FooterLink to="/">Footer Link 3</FooterLink>
+                                <FooterLink to="/">Footer Link 4</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
-                            <FooterLinkTitle>In The News</FooterLinkTitle>
-                                <FooterLink to="/">Blog</FooterLink>
-                                <FooterLink to="/">Articles</FooterLink>
-                                <FooterLink to="/">Media</FooterLink>
-                                <FooterLink to="/">Marketing</FooterLink>
+                        <FooterLinkTitle>Footer Col 4</FooterLinkTitle>
+                                <FooterLink to="/">Footer Link 1</FooterLink>
+                                <FooterLink to="/">Footer Link 2</FooterLink>
+                                <FooterLink to="/">Footer Link 3</FooterLink>
+                                <FooterLink to="/">Footer Link 4</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>
-                            futura
+                            React SPA
                         </SocialLogo>
-                        <WebsiteRights>futura © {new Date().getFullYear()} All rights reserved</WebsiteRights>
+                        <WebsiteRights>React SPA © {new Date().getFullYear()} All rights reserved</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="//www.twitter.com/" target="_blank" aria-label="Facebook">
                                 <FaFacebook />
