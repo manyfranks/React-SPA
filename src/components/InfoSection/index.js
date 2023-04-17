@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from '../ButtonElement';
-import ContactForm from './ContactForm';
 import { InfoContainer, 
         InfoWrapper, 
         InfoRow, 
