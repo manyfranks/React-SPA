@@ -14,7 +14,7 @@ import { FooterContainer,
         WebsiteRights,
         SocialIcons,
         SocialIconLink,
-     } 
+    		} 
         from './FooterElements';
 
 const Footer = () => {
@@ -30,43 +30,27 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Footer Col 1</FooterLinkTitle>
-                                <FooterLink to="/signin">Working Link</FooterLink>
-                                <FooterLink to="/">Footer Link 1</FooterLink>
-                                <FooterLink to="/">Footer Link 2</FooterLink>
-                                <FooterLink to="/">Footer Link 3</FooterLink>
+                            <FooterLinkTitle>Projects</FooterLinkTitle>
                         </FooterLinkItems>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Footer Col 2</FooterLinkTitle>
-                                <FooterLink to="/">Footer Link 1</FooterLink>
-                                <FooterLink to="/">Footer Link 2</FooterLink>
-                                <FooterLink to="/">Footer Link 3</FooterLink>
-                                <FooterLink to="/">Footer Link 4</FooterLink>
+                            <FooterLinkTitle>Company</FooterLinkTitle>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                        <FooterLinkTitle>Footer Col 3</FooterLinkTitle>
-                                <FooterLink to="/">Footer Link 1</FooterLink>
-                                <FooterLink to="/">Footer Link 2</FooterLink>
-                                <FooterLink to="/">Footer Link 3</FooterLink>
-                                <FooterLink to="/">Footer Link 4</FooterLink>
+                        <FooterLinkTitle>Services</FooterLinkTitle>
                         </FooterLinkItems>
                         <FooterLinkItems>
-                        <FooterLinkTitle>Footer Col 4</FooterLinkTitle>
-                                <FooterLink to="/">Footer Link 1</FooterLink>
-                                <FooterLink to="/">Footer Link 2</FooterLink>
-                                <FooterLink to="/">Footer Link 3</FooterLink>
-                                <FooterLink to="/">Footer Link 4</FooterLink>
+                        <FooterLinkTitle>Contact</FooterLinkTitle>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to="/" onClick={toggleHome}>
-                            React SPA
+                            Indigenous Iron Construction
                         </SocialLogo>
-                        <WebsiteRights>React SPA © {new Date().getFullYear()} All rights reserved</WebsiteRights>
+                        <WebsiteRights>Indigenous Iron © {new Date().getFullYear()} All rights reserved</WebsiteRights>
                         <SocialIcons>
                             <SocialIconLink href="//www.twitter.com/" target="_blank" aria-label="Facebook">
                                 <FaFacebook />

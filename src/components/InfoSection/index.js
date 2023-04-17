@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../ButtonElement';
+import ContactForm from './ContactForm';
 import { InfoContainer, 
         InfoWrapper, 
         InfoRow, 
@@ -11,7 +12,7 @@ import { InfoContainer,
         Subtitle, 
         BtnWrap,
         ImgWrap,
-        Img 
+        Img,
         } from './InfoElements';
 
 const InfoSection = ({lightBg, 
@@ -22,8 +23,17 @@ const InfoSection = ({lightBg,
                     headline, 
                     darkText, 
                     description, 
+                    description2, 
                     buttonLabel, 
                     img, 
+										FormButton, 
+										FormContainer, 
+										FormGroup, 
+										FormHeading, 
+										FormInput, 
+										FormLabel, 
+										FormTextarea, 
+										FormWrapper,
                     alt,
                     primary,
                     dark,
@@ -39,6 +49,7 @@ const InfoSection = ({lightBg,
                             <TopLine>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
+                            <Subtitle darkText={darkText}>{description2}</Subtitle>
                             <BtnWrap>
                                 <Button 
                                 to='home' 

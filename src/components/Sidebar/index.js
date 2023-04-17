@@ -18,21 +18,21 @@ const Sidebar = ({isOpen, toggle}) => {
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink to='about' onClick={toggle}>
-                        Info Section 1
+                        Projects
                     </SidebarLink>
                     <SidebarLink to='discover' onClick={toggle}>
-                        Info Section 2
+                        Company
                     </SidebarLink>
                     <SidebarLink to='services' onClick={toggle}>
-                        Card Section
+                        Services
                     </SidebarLink>
                     <SidebarLink to='signup' onClick={toggle}>
-                        Info Section 3
+                        Contact Form
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute to='/signin'>
-                        Sign In
+                    <SidebarRoute href="tel:+16043294094">
+                        Call 604-329-4094
                     </SidebarRoute>
                 </SideBtnWrap>
             </SidebarWrapper>

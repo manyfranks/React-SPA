@@ -19,9 +19,9 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
             <HeroSection />
-            <InfoSection {...homeObjOne}/>
+						<Services />
             <InfoSection {...homeObjTwo}/>
-            <Services />
+            <InfoSection {...homeObjOne}/>
             <InfoSection {...homeObjThree}/>
             <Footer />
         </>
