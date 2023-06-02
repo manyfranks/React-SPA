@@ -99,7 +99,7 @@ export const NavBtn = styled.nav`
     }
 `;
 
-export const NavBtnLink = styled(LinkRouter)`
+export const NavBtnLink = styled.a`
     border-radius: 50px;
     background: #01bf71;
     white-space: nowrap;
@@ -108,7 +108,7 @@ export const NavBtnLink = styled(LinkRouter)`
     font-size: 16px;
     outline: none;
     border: none;
-    cursor: pointer;
+		cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 

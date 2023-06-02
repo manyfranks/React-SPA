@@ -1,4 +1,4 @@
-import ContactForm from './ContactForm';
+import ContactForm from '../ContactForm/index';
 
 export const homeObjOne = {
     id: 'about',
