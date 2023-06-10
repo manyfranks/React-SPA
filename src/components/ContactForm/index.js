@@ -11,12 +11,9 @@ import { 	FormWrap,
 					Text, 
 					InfoContainer,
 					InfoRow,
-					InfoWrapper, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, lightText, darkText } from '../ContactForm/FormElement.js';
+					InfoWrapper, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle } from '../ContactForm/FormElement.js';
 
-const ContactForm = ({
-	lightText,  
-	darkText
-	}) => {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,8 +42,8 @@ const ContactForm = ({
 				<Column1>
 				<TextWrapper>
 					<TopLine>Contact Us</TopLine>
-					<Heading lightText={lightText}>Tell Us About Your Project</Heading>
-					<Subtitle darkText={darkText}>At Indigenous Iron, our mission is to provide exceptional contracting and sub-contracting services to our clients while upholding our commitment to the values of our First Nations communities. We are dedicated to building lasting partnerships with our clients based on trust, mutual respect, and a shared vision for success. Fill out our contact form and we will be happy to help you with your project goals!</Subtitle>
+					<Heading>Tell Us About Your Project</Heading>
+					<Subtitle>At Indigenous Iron, our mission is to provide exceptional contracting and sub-contracting services to our clients while upholding our commitment to the values of our First Nations communities. We are dedicated to building lasting partnerships with our clients based on trust, mutual respect, and a shared vision for success. Fill out our contact form and we will be happy to help you with your project goals!</Subtitle>
 				</TextWrapper>
 				</Column1>
 				<Column2>
