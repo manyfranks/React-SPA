@@ -97,6 +97,12 @@ export const FormH1 = styled.h1`
 export const FormRow = styled.div`
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 10px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const HalfWidthInput = styled.input`
@@ -104,9 +110,13 @@ export const HalfWidthInput = styled.input`
     margin-bottom: 16px;
     border: none;
     border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.9); // match Form box-shadow
-    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    width: 48%;
     box-sizing: border-box;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const InfoContainer = styled.div`
