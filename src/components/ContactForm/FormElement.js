@@ -18,7 +18,7 @@ export const FormContent = styled.div`
     justify-content: center;
 
     @media screen and (max-width: 480px) {
-        padding: 10px;
+        padding: 0; // Remove padding
     }
 `;
 
@@ -32,13 +32,15 @@ export const Form = styled.form`
     padding: 80px 32px;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.9);
-    
-    @media screen and (max-width: 400px) {
-        padding: 32px 32px;
-    }
 
     @media screen and (max-width: 768px) {
-        padding-bottom: 100px; // Add more padding at the bottom when on mobile view
+        padding: 32px 0; // Change padding to 32px top and bottom, 0 left and right
+        box-shadow: none;
+        border: none;
+    }
+
+    @media screen and (max-width: 400px) {
+        padding: 32px 0; // Change padding to 32px top and bottom, 0 left and right
     }
 `;
 
@@ -106,16 +108,17 @@ export const FormRow = styled.div`
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+				padding: 0;
     }
 `;
 
 export const HalfWidthInput = styled.input`
     padding: 16px 16px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     border: none;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.9);
-    width: 48%;
+    width: 100%;
     box-sizing: border-box;
 
     @media screen and (max-width: 768px) {
@@ -129,6 +132,7 @@ export const InfoContainer = styled.div`
 
     @media screen and (max-width:768px) {
         padding: 100px 0;
+				padding-bottom: 250px;
     }
 `;
 
