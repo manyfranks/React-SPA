@@ -1,5 +1,3 @@
-import ContactForm from '../ContactForm/index';
-
 export const homeObjOne = {
     id: 'about',
     lightBg: false,
@@ -15,7 +13,6 @@ export const homeObjOne = {
     dark: true,
     primary: true,
     darkText: false,
-		form: ''
 };
 
 export const homeObjTwo = {
@@ -33,20 +30,4 @@ export const homeObjTwo = {
     dark: false,
     primary: false,
     darkText: true,
-		form: ''
-};
-
-export const homeObjThree = {
-  id: 'signup',
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topLine: 'Contact Us',
-  headline: 'Tell Us About Your Project',
-  description: 'At Indigenous Iron, our mission is to provide exceptional contracting and sub-contracting services to our clients while upholding our commitment to the values of our First Nations communities. We are dedicated to building lasting partnerships with our clients based on trust, mutual respect, and a shared vision for success. Fill out our contact form and we will be happy to help you with your project goals!',
-  buttonLabel: 'Back To Top',
-  dark: false,
-  primary: false,
-  darkText: true,
-	form: <ContactForm />
 };

@@ -69,7 +69,7 @@ const Navbar = ({ toggle }) => {
                                     offset={-80}>Projects</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="signup"
+                                <NavLinks to="contact"
                                     smooth={true}
                                     duration={500}
                                     spy={true}

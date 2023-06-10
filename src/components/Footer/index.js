@@ -29,7 +29,7 @@ const Footer = () => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            <FooterLinkTitle>Projects</FooterLinkTitle>
+                            <FooterLinkTitle>Services</FooterLinkTitle>
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Company</FooterLinkTitle>
@@ -37,7 +37,7 @@ const Footer = () => {
                     </FooterLinksWrapper>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                        <FooterLinkTitle>Services</FooterLinkTitle>
+                        <FooterLinkTitle>Projects</FooterLinkTitle>
                         </FooterLinkItems>
                         <FooterLinkItems>
                         <FooterLinkTitle>Contact</FooterLinkTitle>

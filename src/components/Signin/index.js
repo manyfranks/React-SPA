@@ -11,7 +11,7 @@ import { Container,
         Text 
         } from './SigninElements';
 
-const SignIn = () => {
+export const SignIn = () => {
     return (
         <>
         <Container>
