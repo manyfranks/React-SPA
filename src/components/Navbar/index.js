@@ -78,7 +78,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-													<NavBtnLink href="tel:+16043294094">Call 604-329-4094</NavBtnLink>
+													<NavBtnLink href="tel:+17789284414">Call 778-928-4414</NavBtnLink>
                         </NavBtn>
                     </NavbarContainer>
                 </Nav>
