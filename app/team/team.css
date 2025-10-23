@@ -1,0 +1,252 @@
+/* Team Page Container */
+.team-page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Team Header */
+.team-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f7f8fa;
+  font-weight: 600;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.team-card {
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  border-color: #01bf71;
+}
+
+/* Team Photo Placeholder */
+.team-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #01bf71 0%, #00a85e 100%);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(1, 191, 113, 0.3);
+}
+
+.photo-initials {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Team Card Content */
+.team-card-content {
+  text-align: center;
+}
+
+.team-member-name {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #f7f8fa;
+  font-weight: 600;
+}
+
+.team-member-title {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #01bf71;
+  font-weight: 500;
+}
+
+/* Education Section */
+.team-education {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  text-align: left;
+}
+
+.education-heading {
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  color: #01bf71;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-list li {
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1.6;
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.education-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #01bf71;
+  font-weight: bold;
+}
+
+.education-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Team Bio */
+.team-bio {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.7;
+  text-align: left;
+  opacity: 0.9;
+}
+
+/* Call to Action Section */
+.team-cta {
+  margin-top: 4rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+}
+
+.team-cta-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f7f8fa;
+  font-weight: 600;
+}
+
+.team-cta-description {
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.team-cta-button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #01bf71 0%, #00a85e 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(1, 191, 113, 0.3);
+}
+
+.team-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(1, 191, 113, 0.4);
+  background: linear-gradient(135deg, #00a85e 0%, #01bf71 100%);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .team-page-container {
+    padding: 1.5rem;
+  }
+
+  .team-title {
+    font-size: 2rem;
+  }
+
+  .team-subtitle {
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .team-member-name {
+    font-size: 1.5rem;
+  }
+
+  .team-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .team-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .team-cta-description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-photo-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .photo-initials {
+    font-size: 2rem;
+  }
+
+  .team-title {
+    font-size: 1.75rem;
+  }
+
+  .team-member-name {
+    font-size: 1.3rem;
+  }
+
+  .team-member-title {
+    font-size: 1rem;
+  }
+}
