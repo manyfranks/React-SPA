@@ -41,6 +41,12 @@ export const partners = [
     name: "Sure Span",
     logo: "/images/partners/surespan-logo.png",
     website: "#"
+  },
+  {
+    id: 8,
+    name: "Whitewater",
+    logo: "/images/partners/whitewater.jpg",
+    website: "#"
   }
 ];
 

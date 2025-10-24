@@ -13,21 +13,35 @@ import {
     NavBtnLink
 } from './NavbarElements';
 
-const Navbar = ({ toggle }) => {
-    const [scrollNav, setScrollNav] = useState(false)
-
-    //when scroll past 80px, trigger header background
-    const changeNav = () => {
-        if (window.scrollY >= 80) {
-            setScrollNav(true)
-        } else {
-            setScrollNav(false)
-        }
-    };
+const Navbar = ({ toggle, forceScrolled = false }) => {
+    const [scrollNav, setScrollNav] = useState(forceScrolled)
 
     useEffect(() => {
-        window.addEventListener('scroll', changeNav)
-    }, []);
+        //when scroll past 80px, trigger header background
+        const changeNav = () => {
+            if (window.scrollY >= 80) {
+                setScrollNav(true)
+            } else {
+                setScrollNav(forceScrolled)
+            }
+        };
+
+        window.addEventListener('scroll', changeNav);
+        return () => {
+            window.removeEventListener('scroll', changeNav);
+        };
+    }, [forceScrolled]);
+
+    useEffect(() => {
+        if (forceScrolled) {
+            setScrollNav(true);
+        } else {
+            // Reset to false when navigating to homepage (unless scrolled down)
+            if (window.scrollY < 80) {
+                setScrollNav(false);
+            }
+        }
+    }, [forceScrolled]);
 
     const toggleHome = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });

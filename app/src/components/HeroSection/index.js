@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   HeroContainer,
+  VideoWrapper,
   HeroBg,
   VideoBg,
   HeroContent,
@@ -52,16 +53,18 @@ const HeroSection = () => {
 
   return (
     <HeroContainer id="home">
-      <HeroBg>
-        <VideoBg
-          autoPlay
-          loop={false}
-          muted
-          id="heroVideo"
-          src={videoSrc}
-          type="video/mp4"
-        />
-      </HeroBg>
+      <VideoWrapper>
+        <HeroBg>
+          <VideoBg
+            autoPlay
+            loop={false}
+            muted
+            id="heroVideo"
+            src={videoSrc}
+            type="video/mp4"
+          />
+        </HeroBg>
+      </VideoWrapper>
       <HeroContent>
         <HeroH1>Indigenous Iron Construction</HeroH1>
         <HeroP>

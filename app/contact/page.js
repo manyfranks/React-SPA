@@ -1,4 +1,3 @@
-import PageSection from '../src/components/PageSection';
 import ContactPageContent from './ContactPageContent';
 
 export function generateMetadata() {
@@ -9,9 +8,5 @@ export function generateMetadata() {
 }
 
 export default function ContactPage() {
-  return (
-    <PageSection theme="dark">
-      <ContactPageContent />
-    </PageSection>
-  );
+  return <ContactPageContent />;
 }

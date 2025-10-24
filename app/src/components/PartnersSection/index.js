@@ -1,77 +1,92 @@
 'use client';
 
 import React from 'react';
-import {
-  PartnersContainer,
-  PartnersWrapper,
-  PartnersHeading,
-  PartnersDescription,
-  MarqueeContainer,
-  MarqueeTrack,
-  PartnerLogo,
-  TestimonialsWrapper,
-  TestimonialCard,
-  TestimonialQuote,
-  TestimonialAuthor,
-  TestimonialTitle
-} from './PartnersElements';
-import { partners, testimonials } from '../../lib/partnersData';
+import styled from 'styled-components';
+import PartnersTestimonials from '../PartnersTestimonials';
 
-const PartnersSection = () => {
+const PartnersContainer = styled.section`
+  padding: 40px 24px 100px 24px;
+  background: #ffffff;
+  
+  @media screen and (max-width: 768px) {
+    padding: 30px 16px 60px 16px;
+  }
+`;
+
+const PartnersWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+`;
+
+const PartnersHeader = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 60px;
+  margin-bottom: 60px;
+  align-items: start;
+  
+  @media screen and (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+`;
+
+const Heading = styled.h2`
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+  
+  @media screen and (max-width: 968px) {
+    font-size: 32px;
+  }
+  
+  @media screen and (max-width: 480px) {
+    font-size: 26px;
+  }
+`;
+
+const LabelColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  @media screen and (max-width: 968px) {
+    order: -1;
+  }
+`;
+
+const SectionLabel = styled.div`
+  color: #01bf71;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+`;
+
+const SubLabel = styled.div`
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+`;
+
+const PartnersSection = ({ sectionLabel, subLabel, heading, testimonials }) => {
   return (
-    <PartnersContainer id="partners">
+    <PartnersContainer>
       <PartnersWrapper>
-        <PartnersHeading>Our Valued Partners</PartnersHeading>
-        <PartnersDescription>
-          At Indigenous Iron Construction, we collaborate with industry leaders and organizations committed to environmental stewardship and sustainable development. Together, we deliver exceptional results while honoring our responsibility to the land and communities we serve.
-        </PartnersDescription>
+        <PartnersHeader>
+          <Heading>{heading}</Heading>
+          <LabelColumn>
+            <SectionLabel>{sectionLabel}</SectionLabel>
+            <SubLabel>{subLabel}</SubLabel>
+          </LabelColumn>
+        </PartnersHeader>
         
-        <MarqueeContainer>
-          <MarqueeTrack>
-            <div>
-              {partners.map((partner) => (
-                <PartnerLogo
-                  key={`partner-1-${partner.id}`}
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={partner.name}
-                >
-                  <div className="partner-placeholder">
-                    {partner.name}
-                  </div>
-                </PartnerLogo>
-              ))}
-            </div>
-            <div>
-              {partners.map((partner) => (
-                <PartnerLogo
-                  key={`partner-2-${partner.id}`}
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={partner.name}
-                >
-                  <div className="partner-placeholder">
-                    {partner.name}
-                  </div>
-                </PartnerLogo>
-              ))}
-            </div>
-          </MarqueeTrack>
-        </MarqueeContainer>
-
-        <TestimonialsWrapper>
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id}>
-              <TestimonialQuote>"{testimonial.quote}"</TestimonialQuote>
-              <TestimonialAuthor>{testimonial.author}</TestimonialAuthor>
-              <TestimonialTitle>
-                {testimonial.title} • {testimonial.company}
-              </TestimonialTitle>
-            </TestimonialCard>
-          ))}
-        </TestimonialsWrapper>
+        {/* Testimonials Grid */}
+        {testimonials && testimonials.length > 0 && (
+          <PartnersTestimonials testimonials={testimonials} />
+        )}
       </PartnersWrapper>
     </PartnersContainer>
   );

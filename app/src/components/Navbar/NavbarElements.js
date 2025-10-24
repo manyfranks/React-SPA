@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
+    background: ${({ scrollNav }) => (scrollNav ? 'rgba(16, 21, 34, 0.85)' : 'transparent')};
+    backdrop-filter: ${({ scrollNav }) => (scrollNav ? 'blur(12px)' : 'none')};
+    -webkit-backdrop-filter: ${({ scrollNav }) => (scrollNav ? 'blur(12px)' : 'none')};
+    border-bottom: ${({ scrollNav }) => (scrollNav ? '1px solid rgba(1, 191, 113, 0.1)' : 'none')};
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -10,8 +13,10 @@ export const Nav = styled.nav`
     align-items: center;
     font-size: 1rem;
     position: sticky;
-    top: 0;
+    top: ${({ scrollNav }) => (scrollNav ? '0' : '20px')};
     z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: ${({ scrollNav }) => (scrollNav ? '0 4px 12px rgba(0, 0, 0, 0.1)' : 'none')};
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all-ease;
@@ -25,7 +30,7 @@ export const NavbarContainer = styled.div`
     z-index: 1;
     width: 100%;
     padding: 0 24px;
-    max-width: 1100px;
+    max-width: 1200px;
 `;
 
 export const NavLogo = styled(Link)`
@@ -35,7 +40,6 @@ export const NavLogo = styled(Link)`
     font-size: 1rem;
     display: flex;
     align-items: center;
-    margin-left: 24px;
     text-decoration: none;
 `;
 
@@ -61,8 +65,8 @@ export const NavMenu = styled.ul`
     justify-content: center;
     list-style: none;
     text-align: center;
-    margin: auto;
-    // margin-right: -22px;
+    flex: 1;
+    gap: 0.5rem;
 
     // not shown on mobile
     @media screen and (max-width: 768px) {
@@ -82,6 +86,25 @@ export const NavLinks = styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: #01bf71;
+        transition: width 0.3s ease;
+    }
+
+    @media (hover: hover) {
+        &:hover::after {
+            width: 80%;
+        }
+    }
 
     //bottom green bar when selected
     &.active {

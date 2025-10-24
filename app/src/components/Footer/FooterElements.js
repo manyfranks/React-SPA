@@ -2,112 +2,322 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 export const FooterContainer = styled.footer`
-    background-color: #101522;
-`;
+  background-color: #101522;
+  color: #fff;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 
-export const FooterWrap = styled.div`
-    padding: 48px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-`;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    height: 120%;
+    background-image: url('/images/company-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    opacity: 0.05;
+    filter: invert(1) brightness(1);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-export const FooterLinksContainer = styled.div`
-    display: flex;
-    justify-content: center;
-
-    @media screen and (max-width: 820px) {
-        padding-top: 32px;
+  @media screen and (max-width: 968px) {
+    &::before {
+      width: 50%;
+      opacity: 0.12;
     }
-`;
+  }
 
-export const FooterLinksWrapper = styled.div`
-    display: flex;
-    
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
+  @media screen and (max-width: 768px) {
+    &::before {
+      width: 60%;
+      height: 100%;
+      opacity: 0.1;
     }
+  }
 `;
 
-export const FooterLinkItems = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 16px;
-    text-align: left;
-    width: 160px;
-    box-sizing: border-box;
-    color: #fff;
+export const FooterContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+  position: relative;
+  z-index: 1;
 
-    @media screen and (max-width: 420px) {
-        margin: 0;
-        padding: 10px;
-        width: 100%;
-    }
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1.5rem 1.5rem;
+  }
 `;
 
-export const FooterLinkTitle = styled.h1`
-    font-size: 14px;
-    margin-bottom: 16px;
+export const FooterTop = styled.div`
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media screen and (max-width: 968px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+`;
+
+export const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+// Brand Section Styles
+export const BrandSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+`;
+
+export const BrandName = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #01bf71;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+`;
+
+export const BrandTagline = styled.p`
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #01bf71;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+`;
+
+export const BrandDescription = styled.p`
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 350px;
+`;
+
+// Contact Section Styles
+export const ContactSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const ContactTitle = styled.h3`
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+`;
+
+export const ContactItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+`;
+
+export const ContactIcon = styled.div`
+  color: #01bf71;
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+`;
+
+export const ContactText = styled.p`
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+`;
+
+export const ContactLink = styled.a`
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #01bf71;
+  }
+`;
+
+export const MapLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #01bf71;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #00a85e;
+    transform: translateX(4px);
+  }
+`;
+
+// Quick Links Section Styles
+export const QuickLinksSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const LinksTitle = styled.h3`
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+`;
+
+export const LinksList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 `;
 
 export const FooterLink = styled(Link)`
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    font-size: 14px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
 
-    &:hover {
-        color: #01bf71;
-        transition: 0.3 ease-out;
+  &:hover {
+    color: #01bf71;
+    transform: translateX(4px);
+  }
+`;
+
+// Bottom Section Styles
+export const FooterBottom = styled.div`
+  padding-top: 2rem;
+`;
+
+export const BottomContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+`;
+
+export const CopyrightLegalGroup = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+`;
+
+export const Copyright = styled.p`
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+
+  &::after {
+    content: ' |';
+    margin-left: 0.5rem;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media screen and (max-width: 768px) {
+    &::after {
+      display: none;
     }
+  }
 `;
 
-export const SocialMedia = styled.section`
-    max-width: 1000px;
-    width: 100%;
+export const LegalLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  span {
+    color: rgba(255, 255, 255, 0.3);
+  }
 `;
 
-export const SocialMediaWrap = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
+export const LegalLink = styled(Link)`
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.3s ease;
 
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
-    }
+  &:hover {
+    color: #01bf71;
+  }
 `;
 
-export const SocialLogo = styled(Link)`
-    color: #fff;
-    justify-self: start;
-    cursor:pointer;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    font-weight: bold;
+export const SocialLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    order: 1;
+  }
 `;
 
-export const WebsiteRights = styled.small`
-    color: #fff;
-    margin-bottom: 16px;
-`;
+export const SocialLink = styled.a`
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-export const SocialIcons = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-`;
+  &:hover {
+    color: #01bf71;
+    transform: translateY(-3px);
+  }
 
-export const SocialIconLink = styled.a`
-    color: #fff;
-    font-size: 24px;
+  &:focus {
+    outline: 2px solid #01bf71;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
 `;
